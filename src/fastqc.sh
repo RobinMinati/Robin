@@ -11,12 +11,14 @@ cd sra_data
 #on cree le dossier 
 FASTQ=`ls $(pwd)`
 #je definis la variable FASTQ et j'y inclue les fichiers de sra-data
+cd ..
+mkdir ConQual
+cd sra_data
 for file in $FASTQ
 do
 echo $file
 
-mkdir $file"_ConQual"
-fastqc $file -o $file"_ConQual"
+fastqc $file -o /home/rstudio/disk/ConQual
 # Produces one fastq file, single end data. 
 
 #fastq-dump $srr -O /home/rstudio/disk/sra_data -X 100000 
