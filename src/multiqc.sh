@@ -6,8 +6,9 @@ mkdir -p $data
 cd $data
 mkdir -p ConQual
 mkdir -p ConQualSumm
-cd ConQual
 #on cree le dossier si il n'existe pas
+cd ConQual
+# on va dans ConQual
 
 #FASTQ=`ls $(pwd)`
 #je definis la variable FASTQ et j'y inclue les fichiers de ConQual
@@ -18,5 +19,5 @@ cd ConQual
 
 #cd /home/disk/sra_data/
 multiqc . -o /home/rstudio/disk/ConQualSumm
-
+#dans concal je prends tous les fichiers et on met le output dans ConQualSumm
 done
