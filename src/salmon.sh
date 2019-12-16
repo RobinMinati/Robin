@@ -37,6 +37,7 @@ salmon quant -i transcripts_index -l A -1 $Pair/$patient"_trimmed_paired_1.fastq
 # -p => on donne le nombre de coeurs qu'on met pour faire l'analyse
 # --gcBias = corrige le biais d'observation des reads par rapport aux GC
 #A salmon detecte tout seul la librairie
+#https://salmon.readthedocs.io/en/latest/salmon.html#p-threads
 
 done
 

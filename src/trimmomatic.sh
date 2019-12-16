@@ -3,7 +3,6 @@
 
 Pair=/home/rstudio/disk/sra_data/trimmomatic/pair
 UnPair=/home/rstudio/disk/sra_data/trimmomatic/unpair
-
 #Je définis deux variables correspondants aux chemin des dossiers pair et unpair
 
 data="/home/rstudio/disk/"

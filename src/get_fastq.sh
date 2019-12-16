@@ -41,7 +41,8 @@ awk  -F "\."  '{ if (NR%2 == 1 ) { $3= "" ; print $1 "_" $2 "/2"}  else  { print
 mv temp1.fastq $srr'_1.fastq'
 mv temp2.fastq $srr'_2.fastq'
 #on divise ligne par ligne et on coupe les mots aprés les points. 
-#Si la ligne est impair on remplace le poit par un tiret et le numero aprés la coupure et un /1 ou /2. On nomme le temp1.fastq ou temp1.fastq et on les renomme par le SRR+extension _1.fastq ou _2.fastq
+#Si la ligne est impair on remplace supprime le block 3 ($3) puis on affiche le block 1 puis _ puis le $2 puis /1 ou /2.
+#On nomme le fichier temp1.fastq ou temp1.fastq et on les renomme par le SRR+extension _1.fastq ou _2.fastq
 #awk (modification ligne par ligne=> divise le ligne en morceaux) -F "\."(on coupe au viniveau d'un point caractere)  '{ if (NR%2 == 1 )si le numero de la signe est impair { $3= "" ; print $1 "_" $2 "/1"}  else  { print $0} }'
 #...
 done
