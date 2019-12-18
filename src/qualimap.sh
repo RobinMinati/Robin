@@ -34,29 +34,29 @@ do
 
 #OPTION 1 => trier les données 
 
-cd $star/qualimap
-mkdir -p $patient"_qualimap" 
-#on fait un dossier par patient
+#cd $star/qualimap
+#mkdir -p $patient"_qualimap" 
+##on fait un dossier par patient
 
-cd $star
-# sort the bam using samtools
+#cd $star
+## sort the bam using samtools
 
-samtools sort -o $star/qualimap/$patient"_qualimap"/$patient".bam" -O bam -n -@ 7 $star/$patient"_star.bam"
+#samtools sort -o $star/qualimap/$patient"_qualimap"/$patient".bam" -O bam -n -@ 7 $star/$patient"_star.bam"
 
-#-o => output
-#-O => faire un fichier bam
-#-n => on trie par nom et pas par rappport à la position dans chromosomique
-#-@ => nombre de coeurs plus donner l'input
+##-o => output
+##-O => faire un fichier bam
+##-n => on trie par nom et pas par rappport à la position dans chromosomique
+##-@ => nombre de coeurs plus donner l'input
 
 #OPTION 2 => Faire le qualimap 
 
-#cd $star/qualimap
-#mkdir -p DATA 
-#cd DATA
-#qualimap rnaseq -bam $star/qualimap/$patient"_qualimap"/$patient".bam" \
-#-gtf $data/Hsap_annotation.gtf \
-#-outfile $star/qualimap/DATA/$patient_qualimap.html \
-#-pe -s
+cd $star/qualimap
+mkdir -p DATA 
+cd DATA
+qualimap rnaseq -bam $star/qualimap/$patient"_qualimap"/$patient".bam" \
+-gtf $data/Hsap_annotation.gtf \
+-outfile $star/qualimap/DATA/$patient_qualimap.html \
+-pe -s
 
 #qualimap <tool_name>  => on utilise le tool rnaseq
 

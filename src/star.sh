@@ -42,9 +42,9 @@ Pair=/home/rstudio/disk/sra_data/trimmomatic/pair
 for patient in $SRR
 do
 
-#STAR --runThreadN 7 --genomeDir $data/Corentin/hg38_genome \
-#--readFilesIn $Pair/$patient"_trimmed_paired_1.fastq" $Pair/$patient"_trimmed_paired_2.fastq" \
-#--outFileNamePrefix $data/Star/$patient"_star"
+STAR --runThreadN 7 --genomeDir $data/Corentin/hg38_genome \
+--readFilesIn $Pair/$patient"_trimmed_paired_1.fastq" $Pair/$patient"_trimmed_paired_2.fastq" \
+--outFileNamePrefix $data/Star/$patient"_star"
 
 samtools view -bS $data/Star/$patient"_starAligned.out.sam" > $data/Star/$patient"_star".bam -h
 
