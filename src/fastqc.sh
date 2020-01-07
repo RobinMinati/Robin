@@ -1,7 +1,6 @@
 #! /bin/bash
 #fastqc -h
 
-
 # Hsapiens
 Unpair=/home/rstudio/disk/sra_data/trimmomatic/unpair
 Pair=/home/rstudio/disk/sra_data/trimmomatic/pair
@@ -32,7 +31,7 @@ mkdir -p ConQual_CleanData
 #OPTION 1
 #cd $Unpair
 
-#OPTION 1
+#OPTION 2
 cd $Pair
 
 for file in $FASTQ
