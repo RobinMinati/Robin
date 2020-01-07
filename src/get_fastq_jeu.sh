@@ -1,6 +1,6 @@
 #! /bin/bash
-
 # Hsapiens
+
 data="/home/rstudio/disk/"
 mkdir -p $data
 cd $data

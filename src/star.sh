@@ -32,12 +32,13 @@ Pair=/home/rstudio/disk/sra_data/trimmomatic/pair
 #--genomeFastaFiles $data/Hsap_genome.gtf \
 #--sjdbGTFfile $data/Hsap_annotation.gtf --sjdbOverhang 100
 
-#--runThreadN NumberOfThreads
-#--runMode genomeGenerate
-#--genomeDir /path/to/genomeDir
-#--genomeFastaFiles /path/to/genome/fasta1 /path/to/genome/fasta2 ... 
-#--sjdbGTFfile /path/to/annotations.gtf
-#--sjdbOverhang ReadLength-1
+##legend 
+##--runThreadN NumberOfThreads
+##--runMode genomeGenerate
+##--genomeDir /path/to/genomeDir
+##--genomeFastaFiles /path/to/genome/fasta1 /path/to/genome/fasta2 ... 
+##--sjdbGTFfile /path/to/annotations.gtf
+##--sjdbOverhang ReadLength-1
 
 for patient in $SRR
 do
